@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("Test Test", () => {
+test.describe("Suite Variables Test", () => {
   const usernameInput = '[data-test="username"]';
   const passwordInput = '[data-test="password"]';
   const loginButton = '[data-test="login-button"]';
@@ -9,7 +9,7 @@ test.describe("Test Test", () => {
   const login = "standard_user";
   let pass = "wrong";
 
-  test("Test Test", async ({ page }) => {
+  test("Variables Test", async ({ page }) => {
     await page.goto("/");
     await page.locator(usernameInput).fill(login);
     await page.locator(passwordInput).fill(pass);
