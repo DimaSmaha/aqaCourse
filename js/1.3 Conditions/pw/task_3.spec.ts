@@ -8,7 +8,7 @@
  *
  * 4. Use assertions to verify the expected behavior.
  *
- * 💡 **Clue:** Try checking if a number (e.g., item count, score, or displayed value) meets a condition before performing an action.
+ * 💡 **Clue:** Create a verification for the user password, and if the password is incorrect, fail the test
  */
 
 import { test, expect } from "@playwright/test";

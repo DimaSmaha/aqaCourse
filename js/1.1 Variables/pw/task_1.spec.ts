@@ -22,6 +22,8 @@
  * List of userData
  *  login = "standard_user";
  *  pass = "secret_sauce";
+ *
+ * 💡 **Clue:** Create a test where we firstly would enter wrong password, and then fix it inside of the test
  */
 
 import { test, expect } from "@playwright/test";
