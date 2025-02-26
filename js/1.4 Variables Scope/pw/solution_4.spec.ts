@@ -10,8 +10,7 @@
  *
  * 5. Use assertions to verify expected values.
  *
- * 💡 **Clue:** Pay attention to how `let` and `const` behave inside blocks `{}` and how they differ from globally declared variables.
- *    **Clue:** Create 2 tests, in one create a local variable that would make the test pass, in other do not add a local variable and make the test pass
+ * 💡 **Clue:** Create 2 tests, in one create a local variable that would make the test pass, in other do not add a local variable and make the test pass
  */
 
 import { test, expect } from "@playwright/test";
