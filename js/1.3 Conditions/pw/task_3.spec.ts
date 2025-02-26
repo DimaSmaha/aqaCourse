@@ -13,6 +13,19 @@
 
 import { test, expect } from "@playwright/test";
 
-test.describe("Test Test", () => {
-  test("Test Test", async ({ page }) => {});
+test.describe("Suite Conditions Test", () => {
+  const usernameInput = '[data-test="username"]';
+  const passwordInput = '[data-test="password"]';
+  const loginButton = '[data-test="login-button"]';
+  const item = '[id="item_4_title_link"]';
+  const login = "standard_user";
+  const pass = "secret_sauce";
+
+  test("Conditions Test", async ({ page }) => {
+    await page.goto("/");
+    await page.locator(usernameInput).fill(login);
+    await page.locator(passwordInput).fill(pass); // verify that password Is correct
+    await page.locator(loginButton).click();
+    await expect(page.locator(item)).toBeVisible();
+  });
 });

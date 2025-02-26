@@ -13,6 +13,27 @@
 
 import { test, expect } from "@playwright/test";
 
-test.describe("Test Test", () => {
-  test("Test Test", async ({ page }) => {});
+test.describe("Suite Operators Test", () => {
+  test("Operators Test", async ({ page }) => {
+    const usernameInput = '[data-test="username"]';
+    const passwordInput = '[data-test="password"]';
+    const loginButton = '[data-test="login-button"]';
+    const item = '[id="item_4_title_link"]';
+    const login = "standard_user";
+    const pass = "secret_sauce";
+    const addBackback = '[data-test="add-to-cart-sauce-labs-backpack"]';
+    const addLight = '[data-test="add-to-cart-sauce-labs-bike-light"]';
+    const itemsCounter = '[data-test="shopping-cart-badge"]';
+
+    test("Operator Test", async ({ page }) => {
+      await page.goto("/");
+      await page.locator(usernameInput).fill(login);
+      await page.locator(passwordInput).fill(pass);
+      await page.locator(loginButton).click();
+      await expect(page.locator(item)).toBeVisible();
+
+      await page.locator(addBackback).click(); //add counter and increase a number on one
+      await expect(page.locator(itemsCounter)).toHaveText(""); //verify the counter
+    });
+  });
 });

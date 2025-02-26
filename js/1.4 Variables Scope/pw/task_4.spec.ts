@@ -15,6 +15,28 @@
 
 import { test, expect } from "@playwright/test";
 
-test.describe("Test Test", () => {
-  test("Test Test", async ({ page }) => {});
+test.describe("Suite Scope Test", () => {
+  const usernameInput = '[data-test="username"]';
+  const passwordInput = '[data-test="password"]';
+  const loginButton = '[data-test="login-button"]';
+  const item = '[id="item_4_title_link"]';
+  const error = '[data-test="error"]';
+  const login = "standard_user";
+  const pass = "wrongPassword";
+
+  test("Scope Test", async ({ page }) => {
+    await page.goto("/");
+    await page.locator(usernameInput).fill(login);
+    await page.locator(passwordInput).fill(pass); // fix the test block to make sure that password is correct
+    await page.locator(loginButton).click();
+    await expect(page.locator(item)).toBeVisible();
+  });
+
+  test("Scope Test2", async ({ page }) => {
+    await page.goto("/");
+    await page.locator(usernameInput).fill(login);
+    await page.locator(passwordInput).fill(pass);
+    await page.locator(loginButton).click();
+    //verify that pass is incorrect
+  });
 });
