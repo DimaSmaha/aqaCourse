@@ -5,6 +5,7 @@ const config: PlaywrightTestConfig = {
   testDir: ".",
   testMatch: [
     "js/**/pw/*.spec.ts",
+    "js/**/pw/**/*.spec.ts",
     // "tests/folderB/**/*.spec.ts"
   ],
   timeout: 300000,
