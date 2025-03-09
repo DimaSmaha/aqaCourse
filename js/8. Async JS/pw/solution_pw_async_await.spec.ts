@@ -11,6 +11,7 @@
  * 5. Use assertions to verify expected behavior.
  *
  * 💡 **Clue:** Playwright functions (and any functions in any frameworks) return promises, so omitting `await` may lead to unexpected results.
+ * 💡 **Clue:** We are always working inside of the async functions
  */
 
 import { test, expect } from "@playwright/test";
@@ -24,10 +25,20 @@ test.describe("Suite Async Await Test", () => {
   const pass = "secret_sauce";
 
   test("Async Await Test", async ({ page }) => {
-    //default test for login
+    await page.goto("/");
+    await page.locator(usernameInput).fill(login);
+    await page.locator(passwordInput).fill(pass);
+    await page.locator(passwordInput).fill(pass);
+    await page.locator(loginButton).click();
+    await expect(page.locator(item)).toBeVisible();
   });
 
   test("Async Await Test 2", ({ page }) => {
-    // default test for login, but does not use await inside
+    page.goto("/");
+    page.locator(usernameInput).fill(login);
+    page.locator(passwordInput).fill(pass);
+    page.locator(passwordInput).fill(pass);
+    page.locator(loginButton).click();
+    expect(page.locator(item)).toBeVisible();
   });
 });
