@@ -37,7 +37,7 @@ test.describe("Suite Array Test", () => {
   test("Array Test", async ({ page }) => {
     let locatorsArr = locatorGenerator(locators);
     await page.goto("/");
-    await page.locator().fill(login); // call the locators using the locatorsArr
+    await page.locator().fill(login); // call the locators using the locatorsArr and index
     await page.locator().fill(pass);
     await page.locator().click();
     await expect(page.locator()).toBeVisible();
