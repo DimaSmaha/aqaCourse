@@ -1,4 +1,4 @@
-/** TASK 1 - Variable Declaration
+/** TASK - Variable Declaration
  *
  * 1. Declare a variable named "carModel" and assign it a string value
  * representing a car model.

@@ -1,4 +1,4 @@
-/** TASK 2 - Assigning a New Value to a Variable
+/** TASK - Assigning a New Value to a Variable
  *
  * 1. Declare a variable named "hasDriverLicense" without assigning a value.
  *
