@@ -1,4 +1,4 @@
-/** TASK 18 - Working with Promises
+/** TASK - Working with Promises
  *
  * 1. Create a function "fetchData" that returns a Promise.
  *    - The Promise should resolve after 2 seconds with a person object containing name, job, and age.

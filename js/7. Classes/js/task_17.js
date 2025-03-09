@@ -1,4 +1,4 @@
-/** TASK 17 - Class Inheritance and Method Overriding
+/** TASK - Class Inheritance and Method Overriding
  *
  * 1. Create a class Car with properties: brand, model, and year.
  *    - Add a method displayInfo, that logs car details.

@@ -1,4 +1,4 @@
-/** TASK 10 - Using the Map Method
+/** TASK - Using the Map Method
  *
  * 1. Declare an array "numbers" with at least five different numbers.
  *

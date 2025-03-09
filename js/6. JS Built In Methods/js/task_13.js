@@ -1,4 +1,4 @@
-/** TASK 13 - Working with Object Methods
+/** TASK - Working with Object Methods
  *
  * 1. Declare an object "person" with properties: name, age, and city.
  *

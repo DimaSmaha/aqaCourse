@@ -1,4 +1,4 @@
-/** TASK 3 - Multiplication of Two Numbers
+/** TASK - Multiplication of Two Numbers
  *
  * 1. Declare two variables and assign them any numbers.
  *

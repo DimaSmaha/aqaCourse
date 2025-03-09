@@ -1,4 +1,4 @@
-/** TASK 11 - Using the Filter Method
+/** TASK - Using the Filter Method
  *
  * 1. Declare an array "ages" with at least seven different numbers.
  *

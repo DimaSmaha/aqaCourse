@@ -1,4 +1,4 @@
-/** TASK 14 - Creating and Modifying an Object
+/** TASK - Creating and Modifying an Object
  *
  * 1. Create an object "car" with properties: brand, doorsNum, and price.
  *

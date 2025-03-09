@@ -1,4 +1,4 @@
-/** TASK 9 - Working with Arrays
+/** TASK - Working with Arrays
  *
  * 1. Declare an array "fruits" and assign it a list of at least five different fruits.
  *

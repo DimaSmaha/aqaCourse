@@ -1,4 +1,4 @@
-/** TASK 12 - Basic String Methods
+/** TASK - Basic String Methods
  *
  * 1. Declare a variable "firstName" and assign it any string.
  *

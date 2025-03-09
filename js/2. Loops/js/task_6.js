@@ -1,4 +1,4 @@
-/** TASK 6 - Looping Through Numbers
+/** TASK - Looping Through Numbers
  *
  * 1. Declare a variable "limit" and assign it a number greater than 5.
  *

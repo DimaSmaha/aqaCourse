@@ -1,4 +1,4 @@
-/** TASK 8 - Function Scope
+/** TASK - Function Scope
  *
  * 1. Declare a function "calculateSum" that takes two parameters.
  *

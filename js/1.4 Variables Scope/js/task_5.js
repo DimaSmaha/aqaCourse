@@ -1,4 +1,4 @@
-/** TASK 5 - Variable Scope
+/** TASK - Variable Scope
  *
  * 1. Declare a global variable "globalVar" and assign it any value.
  *

@@ -1,4 +1,4 @@
-/** TASK 15 - Generating Fake Data with Faker.js
+/** TASK - Generating Fake Data with Faker.js
  *
  * 1. Install faker.js using npm
  *

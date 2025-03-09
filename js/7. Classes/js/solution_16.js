@@ -1,4 +1,4 @@
-/** TASK 16 - Creating a Class with a Constructor and Methods
+/** TASK - Creating a Class with a Constructor and Methods
  *
  * 1. Create a class "Car" with:
  *    - A constructor that takes "brand", "year" and "price" as parameters and assigns them to properties.

@@ -1,4 +1,4 @@
-/** TASK 4 - Checking Age with IF Statement
+/** TASK - Checking Age with IF Statement
  *
  * 1. Declare a variable "age" and assign it any number.
  *
