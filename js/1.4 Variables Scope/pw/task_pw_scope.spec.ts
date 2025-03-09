@@ -2,7 +2,7 @@
  *
  * 1. Create 2 Playwright tests.
  *
- * 2. Declare variables using `let` or `const` inside and outside a function or block.
+ * 2. Declare variables using `let` or `const` inside and outside of a test block.
  *
  * 3. Try accessing the variables from different parts of the test.
  *
@@ -25,11 +25,9 @@ test.describe("Suite Scope Test", () => {
   const pass = "wrongPassword";
 
   test("Scope Test", async ({ page }) => {
-    const pass = "secret_sauce";
-
     await page.goto("/");
     await page.locator(usernameInput).fill(login);
-    await page.locator(passwordInput).fill(pass);
+    await page.locator(passwordInput).fill(pass); // fix the test inside of the block to make sure that password is correct. DO NOT CHANGE THE pass variable!
     await page.locator(loginButton).click();
     await expect(page.locator(item)).toBeVisible();
   });
@@ -39,6 +37,6 @@ test.describe("Suite Scope Test", () => {
     await page.locator(usernameInput).fill(login);
     await page.locator(passwordInput).fill(pass);
     await page.locator(loginButton).click();
-    await expect(page.locator(error)).toBeVisible();
+    //verify that pass is incorrect
   });
 });
