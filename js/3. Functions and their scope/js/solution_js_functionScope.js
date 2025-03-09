@@ -9,6 +9,8 @@
  * 3. Call "calculateSum" with any two numbers.
  *
  * 4. Try to output "result" outside the function and observe what happens.
+ *
+ * 💡 **Clue:** You should console log the result 2 times, one inside of the function, other time outside
  */
 
 function calculateSum(a, b) {

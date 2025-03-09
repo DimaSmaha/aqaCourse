@@ -34,7 +34,7 @@ test.describe("Suite Function Scope Test", () => {
   test("Function Scope Test", async ({ page }) => {
     await page.goto("/");
     await page.locator(usernameInput).fill(); // call the function and get the login
-    await page.locator(passwordInput).fill(); // just call the pass variable
+    await page.locator(passwordInput).fill(pass); // why this shows an error?
     await page.locator(passwordInput).fill(); // call the function and get the pass
     await page.locator(loginButton).click();
     await expect(page.locator(item)).toBeVisible();
