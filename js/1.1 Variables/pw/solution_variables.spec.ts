@@ -6,7 +6,7 @@
  *
  * 3. Use `let` to define a variable that will store dynamic values during the test.
  *
- * 4. Perform interactions like filling out a form, clicking a button, or verifying text.
+ * 4. Perform interactions like filling out a form login form, clicking a login button, and verifying that we are logged in.
  *
  * 5. Use assertions to verify expected behavior.
  *
