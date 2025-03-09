@@ -7,7 +7,7 @@
  *    - A method increasePrice, that takes a number as a parameter and increases the price by the number it was passed.
  *      Make sure to change the price in entire object
  *
- * 2. Create an instance of "Car" with any brand and year.
+ * 2. Create an instance of "Car" with any brand, year and price.
  *
  * 3. Call all three methods and output the results to the console. Check that cars price was changed
  */

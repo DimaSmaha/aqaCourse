@@ -6,7 +6,7 @@
  *
  * 3. Create a loginPage.page.ts file that extends the functionality from common.ts.
  *
- * 4. Create a methods in loginPage to interract with elements, like fillUsername, fillPassword, clickLoginBtn
+ * 4. Create a methods in loginPage to interract with elements, like fillUsername, fillPassword, clickLoginBtn. Using the methods from common.ts
  *
  * 5. Use a class in `common.ts` as a base class and extend it in `loginPage.page.ts`.
  *
@@ -19,18 +19,19 @@
  */
 
 import { test } from "@playwright/test";
-import LoginPage from "./login.page";
 
 test.describe("Suite Class & Page Object Test", () => {
   const login = "standard_user";
   const pass = "secret_sauce";
 
   test("Page Object Test", async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.openWebsite();
-    await loginPage.fillUsername(login);
-    await loginPage.fillPassword(pass);
-    await loginPage.clickLogin();
-    await loginPage.isItemVisisble();
+    // import loginPage
+    await loginPage.openWebsite(); // implement the method
+    await loginPage.fillUsername(login); // implement the method
+    await loginPage.fillPassword(pass); // implement the method
+    await loginPage.clickLogin(); // implement the method
+    await loginPage.isItemVisisble(); // implement the method
+
+    // make sure to create the in clickElement, fillElement, isElementVisisble common.ts file & reuse them in loginPage file
   });
 });
