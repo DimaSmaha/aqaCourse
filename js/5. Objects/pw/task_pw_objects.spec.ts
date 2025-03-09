@@ -24,12 +24,12 @@ test.describe("Suite Object Test", () => {
   const item = '[id="item_4_title_link"]';
   const error = '[data-test="error"]';
 
-  const loginData = { login: "standard_user", pass: "wrongPasse" };
+  const loginData = {};
 
   test("Object Test", async ({ page }) => {
     await page.goto("/");
-    await page.locator(usernameInput).fill(); //use object to get the login data
-    await page.locator(passwordInput).fill(); //use object to get the login data
+    await page.locator(usernameInput).fill(); //use object to get the login data username
+    await page.locator(passwordInput).fill(); //use object to get the login data password
     await page.locator(loginButton).click();
     await expect(page.locator(error)).toBeVisible();
     // change password in object and enter the password again

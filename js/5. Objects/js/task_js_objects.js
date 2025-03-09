@@ -10,5 +10,3 @@
  *
  * 5. Delete the "model" property and output the final object.
  */
-
-const car = {};
