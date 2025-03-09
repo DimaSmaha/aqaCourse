@@ -32,8 +32,9 @@ test.describe("Suite Operators Test", () => {
       await page.locator(loginButton).click();
       await expect(page.locator(item)).toBeVisible();
 
-      await page.locator(addBackback).click(); //add counter and increase a number on one
-      await expect(page.locator(itemsCounter)).toHaveText(""); //verify the counter
+      await page.locator(addBackback).click(); //add a counter variable and increase a number by one
+      await expect(page.locator(itemsCounter)).toHaveText(""); //verify the counter variable
+      // add the bike light item, increase the counter and verify the counter variable
     });
   });
 });
