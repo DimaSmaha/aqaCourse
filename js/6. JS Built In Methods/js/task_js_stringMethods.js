@@ -9,17 +9,8 @@
  *    - Find the length of the combinedString and output it.
  *    - Extract the first letter and output it.
  *    - Extract the last letter and output it.
+ *    - Make all the sentence uppercase
  */
 
 const firstName = "Jonathan";
 const lastName = "Smith";
-
-const combinedString = firstName.concat(" ", lastName);
-
-console.log("Combined:", combinedString);
-
-console.log("Length of name:", combinedString.length);
-
-console.log("First letter:", combinedString.charAt(0));
-
-console.log("Last letter:", combinedString.charAt(combinedString.length - 1));
