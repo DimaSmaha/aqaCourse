@@ -1,4 +1,4 @@
-/** TASK - Using a String Built in methods to manipulate with the strubg in a Playwright Test
+/** TASK - Using a String Built in methods to manipulate with the string in a Playwright Test
  *
  * 1. Create a Playwright test.
  *
@@ -26,14 +26,12 @@ test.describe("Suite JS Built in String Methods Test", () => {
 
   test("JS Built in String Methods Test", async ({ page }) => {
     await page.goto("/");
-    await page.locator(usernameInput).fill(login);
-    await page.locator(passwordInput).fill(pass);
+    await page.locator(usernameInput).fill(); //enter incorrect login and passwrod
+    await page.locator(passwordInput).fill();
     await page.locator(loginButton).click();
-    await expect(page.locator(error)).toBeVisible();
-    await page.locator(usernameInput).clear();
-    await page.locator(usernameInput).fill(login.toLowerCase());
-    await page.locator(passwordInput).clear();
-    await page.locator(passwordInput).fill(pass.trim());
+    // verify that error is shown
+
+    // fill the form with valid data to be able to login, using the JS built in methods
     await page.locator(loginButton).click();
     await expect(page.locator(item)).toBeVisible();
   });

@@ -1,4 +1,4 @@
-/** TASK - Using a For Loop to Iterate Through an Array in a Playwright Test
+/** TASK - Using an Array methods to Iterate Through an Array in a Playwright Test
  *
  * 1. Create a Playwright test.
  *
@@ -37,7 +37,7 @@ test.describe("Suite JS Built in Array Methods Test", () => {
   test("JS Built in Array Methods Test", async ({ page }) => {
     let locatorsArr = locatorGenerator(locators);
     await page.goto("/");
-    await page.locator().fill(login); // call all locators with the locators arr
+    await page.locator().fill(login); // call the particular locators with the locatorsArr
     await page.locator().fill(pass);
     await page.locator().click();
     await expect(page.locator()).toBeVisible();

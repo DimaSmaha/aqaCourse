@@ -1,4 +1,4 @@
-/** TASK - Using a ForEach to Iterate Through an Array in a Playwright Test
+/** TASK - Using an Array methods to Iterate Through an Array in a Playwright Test
  *
  * 1. Create a Playwright test.
  *
