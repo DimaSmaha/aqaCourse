@@ -1,3 +1,5 @@
+### Test Automation Framework Basics
+
 Create a testing framework from scratch on the base of Cypress for the website [https://www.redmine.org/](https://www.redmine.org/)
 
 1. Create and write a 10 automation test cases that would verify the basic functionality all over the website
