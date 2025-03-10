@@ -1,6 +1,12 @@
 import Common from "./common";
 
 class InventoryPage extends Common {
+  /**
+   * There may be a different styles of writing the code
+   * It can depend from anything, from person, company, project, styling
+   * You should just understand that its all the same
+   */
+
   get getBackbackItem(): Cypress.Chainable<JQuery<HTMLElement>> {
     return cy.get("#item_4_title_link");
   }

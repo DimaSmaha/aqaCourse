@@ -1,5 +1,5 @@
 abstract class Common {
-  public openPage(pageEndpoint: string) {
+  openPage(pageEndpoint: string) {
     cy.visit(pageEndpoint);
   }
 }

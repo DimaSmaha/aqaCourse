@@ -1,44 +1,42 @@
 import Common from "./common";
 import { userData } from "../fixtures/data.json";
 class LoginPage extends Common {
+  /**
+   * There may be a different styles of writing the code
+   * It can depend from anything, from person, company, project, styling
+   * You should just understand that its all the same
+   */
+
   public openLoginPage(): void {
     super.openPage("/");
   }
 
-  public loginWithValidData(): void {
+  loginWithValidData() {
     super.openPage("/");
-    this.fillUserNameInput(userData.correctUserLogin);
+    this.fillUserNameInput(userData.correctUserLogin); //set env
     this.fillPasswordInput(userData.userPassword);
     this.clickLoginButton();
   }
 
-  get getUserNameInput(): Cypress.Chainable<JQuery<HTMLElement>> {
-    return cy.getByTestId("username");
-  }
+  getUserNameInput = () => cy.getByTestId("username");
 
-  get getPasswordInput(): Cypress.Chainable<JQuery<HTMLElement>> {
-    return cy.getByTestId("password");
-  }
+  getPasswordInput = () => cy.getByTestId("password");
 
-  get getLoginButton(): Cypress.Chainable<JQuery<HTMLElement>> {
-    return cy.getByTestId("login-button");
-  }
+  getLoginButton = () => cy.getByTestId("login-button");
 
-  get getLoginError(): Cypress.Chainable<JQuery<HTMLElement>> {
+  getLoginError() {
     return cy.getByTestId("error");
   }
 
-  public fillUserNameInput(userName: string): void {
-    this.getUserNameInput.type(userName);
+  fillUserNameInput = (userName: string) => {
+    this.getUserNameInput().type(userName);
+  };
+
+  fillPasswordInput(password: string): void {
+    this.getPasswordInput().type(password);
   }
 
-  public fillPasswordInput(password: string): void {
-    this.getPasswordInput.type(password);
-  }
-
-  public clickLoginButton(): void {
-    this.getLoginButton.click();
-  }
+  clickLoginButton = () => this.getLoginButton().click();
 }
 
 export default new LoginPage();
