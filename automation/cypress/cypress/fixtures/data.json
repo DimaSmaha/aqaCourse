@@ -1,0 +1,12 @@
+{
+  "userData": {
+    "correctUserLogin": "standard_user",
+    "userPassword": "secret_sauce"
+  },
+  "inventoryPageData": {
+    "backpackItemName": "Sauce Labs Backpack"
+  },
+  "errorTexts": {
+    "loginErrorText": "Epic sadface: Username and password do not match any user in this service"
+  }
+}
