@@ -19,6 +19,9 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run cy-run-smoke
+        env:
+          USER_LOGIN: ${{ secrets.USER_LOGIN }}
+          USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
 
       - uses: actions/upload-artifact@v4
         if: always()
