@@ -1,8 +1,4 @@
 {
-  "userData": {
-    "correctUserLogin": "standard_user",
-    "userPassword": "secret_sauce"
-  },
   "inventoryPageData": {
     "backpackItemName": "Sauce Labs Backpack"
   },

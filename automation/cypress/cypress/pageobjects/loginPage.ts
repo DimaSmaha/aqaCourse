@@ -1,5 +1,5 @@
+import { userData } from "./../support/getDotEnvData";
 import Common from "./common";
-import { userData } from "../fixtures/data.json";
 class LoginPage extends Common {
   /**
    * There may be a different styles of writing the code
@@ -13,7 +13,7 @@ class LoginPage extends Common {
 
   loginWithValidData() {
     super.openPage("/");
-    this.fillUserNameInput(userData.correctUserLogin); //set env
+    this.fillUserNameInput(userData.userLogin);
     this.fillPasswordInput(userData.userPassword);
     this.clickLoginButton();
   }

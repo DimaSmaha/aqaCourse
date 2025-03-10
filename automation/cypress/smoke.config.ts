@@ -1,6 +1,11 @@
 require("dotenv").config();
 import { defineConfig } from "cypress";
 
+const env = {
+  USER_LOGIN: process.env.USER_LOGIN,
+  USER_PASSWORD: process.env.USER_PASSWORD,
+};
+
 export default defineConfig({
   viewportWidth: 1280,
   viewportHeight: 1024,
@@ -18,4 +23,5 @@ export default defineConfig({
     runMode: 2,
     openMode: 0,
   },
+  env,
 });
