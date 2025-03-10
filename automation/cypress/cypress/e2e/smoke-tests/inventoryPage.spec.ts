@@ -1,6 +1,6 @@
 import inventoryPage from "cypress/pageobjects/inventoryPage";
 import loginPage from "cypress/pageobjects/loginPage";
-import { userData, inventoryPageData } from "../../fixtures/data.json";
+import { inventoryPageData } from "../../fixtures/data.json";
 
 describe("InventoryPage tests", () => {
   beforeEach(() => {
