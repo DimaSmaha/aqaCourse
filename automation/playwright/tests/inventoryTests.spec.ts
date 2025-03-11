@@ -1,16 +1,14 @@
 import { InventoryPage } from "./../pages/inventoryPage.page";
 import { test, expect } from "@playwright/test";
 import { HomePage } from "../pages/homePage.page";
+import { userDTO } from "../patterns/dto";
 
 test.describe("Inventory page tests", () => {
-  const username = "standard_user";
-  const password = "secret_sauce";
-
   test.beforeEach(async ({ page }) => {
     let home = new HomePage(page);
     await home.goto();
     await page.waitForLoadState();
-    await home.doLogin(username, password);
+    await home.doLogin(userDTO.username, userDTO.password);
   });
 
   test("Check backpack name", async ({ page }) => {
