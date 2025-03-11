@@ -3,7 +3,8 @@
     "cy-open": "cypress open",
     "cy-open-smoke": "cd automation/cypress && cypress open --config-file smoke.config.ts",
     "cy-run-smoke": "cd automation/cypress && cypress run --config-file smoke.config.ts",
-    "pw-run-smoke": "cd automation/playwright && npx playwright test --config smoke.config.ts"
+    "pw-run-smoke": "cd automation/playwright && npx playwright test --config smoke.config.ts",
+    "pw-run-regr": "cd automation/playwright && npx playwright test --config regression.config.ts"
   },
   "dependencies": {
     "@playwright/test": "^1.50.1"
