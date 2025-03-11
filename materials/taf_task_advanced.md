@@ -8,6 +8,7 @@ Create a testing framework from scratch on the base of Playwright for the websit
 4. Use any other design pattern for your solution, for eg DTO, PageObjectComponents or any other pattern  [https://github.com/DimaSmaha/design-patterns-examples/tree/main/v2](https://github.com/DimaSmaha/design-patterns-examples/tree/main/v2)
 5. Generate a random data with faker.js to make sure that your test data will be dynamic
 6. Use environment variables to store credentials and sensitive data
-7. Create 2 configs to be able to run the tests on different browsers & different screen sizes
-8. Upload a solution to Github & Integrate your solution with Github Actions to run tests automatically on each push. Optimize your tests to run them in parallel.
+7. Create 2 configs to be able to run the tests on different browsers & different screen sizes.
+8. Use 2 projects in one of the configs
+9. Upload a solution to Github & Integrate your solution with Github Actions to run tests automatically on each push. Optimize your tests to run them in parallel.
    Drop the link with your solution for the verification
