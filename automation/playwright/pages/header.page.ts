@@ -1,6 +1,6 @@
 import { expect, Locator, Page } from "@playwright/test";
 
-export class topHeader {
+export class TopHeader {
   readonly page: Page;
   readonly cartCounter: Locator;
 

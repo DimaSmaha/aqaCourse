@@ -1,7 +1,7 @@
-import { topHeader } from "./header.page";
+import { TopHeader } from "./header.page";
 import { expect, Locator, Page } from "@playwright/test";
 
-export class inventoryPage extends topHeader {
+export class InventoryPage extends TopHeader {
   readonly page: Page;
   readonly backpackTitle: Locator;
   readonly backpackDescription: Locator;
