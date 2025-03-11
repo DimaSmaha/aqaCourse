@@ -14,8 +14,10 @@ export class Facade {
     this.pageFactory = new PageFactory(page);
   }
 
-  loginAndVerifyItemIsDisplayed(userDTO: IUserDTO) {
-    this.pageFactory.homePage.doLoginDTO(userDTO);
-    expect(this.pageFactory.inventoryPage.backpackDescription).toBeVisible();
+  async loginAndVerifyItemIsDisplayed(userDTO: IUserDTO) {
+    await this.pageFactory.homePage.doLoginDTO(userDTO);
+    await expect(
+      this.pageFactory.inventoryPage.backpackDescription
+    ).toBeVisible();
   }
 }
