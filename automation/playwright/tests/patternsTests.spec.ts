@@ -1,3 +1,4 @@
+import { Facade } from "./../patterns/facade";
 import { checkoutData } from "./../helpers/generateString";
 import { test, expect } from "@playwright/test";
 import { userDTO } from "../patterns/dto";
@@ -5,18 +6,20 @@ import { PageFactory } from "../patterns/pageFactory";
 
 test.describe("Patterns tests", () => {
   let pageFactory: PageFactory;
+  let facade: Facade;
   const checkoutFirstName = checkoutData.randomFirstName;
   const checkoutLastName = checkoutData.randomLastName;
   const checkoutPostalCode = checkoutData.randomPostalCode;
 
   test.beforeEach(async ({ page }) => {
-    let pageFactory = new PageFactory(page);
+    pageFactory = new PageFactory(page);
+    facade = new Facade(page);
     await pageFactory.homePage.goto();
     await page.waitForLoadState();
   });
 
   test("Should sing in to created account", async () => {
-    await pageFactory.facade.loginAndVerifyItemIsDisplayed(userDTO);
+    await facade.loginAndVerifyItemIsDisplayed(userDTO);
   });
 
   test("Should generate random checkout data", async () => {
@@ -30,10 +33,10 @@ test.describe("Patterns tests", () => {
     await expect(pageFactory.checkoutPage.getFirstNameInput()).toHaveValue(
       checkoutFirstName
     );
-    await expect(pageFactory.checkoutPage.getFirstNameInput()).toHaveValue(
+    await expect(pageFactory.checkoutPage.getLastNameInput()).toHaveValue(
       checkoutLastName
     );
-    await expect(pageFactory.checkoutPage.getFirstNameInput()).toHaveValue(
+    await expect(pageFactory.checkoutPage.getPostalCodeInput()).toHaveValue(
       checkoutPostalCode
     );
     //How we can fail the test with this random data? How we can cause to make data random during each call?
