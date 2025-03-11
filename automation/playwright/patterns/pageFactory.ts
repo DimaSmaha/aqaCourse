@@ -1,6 +1,6 @@
 import { Page } from "@playwright/test";
-import { HomePage } from "./homePage.page";
-import { InventoryPage } from "./inventoryPage.page";
+import { HomePage } from "../pages/homePage.page";
+import { InventoryPage } from "../pages/inventoryPage.page";
 
 export class PageFactory {
   page: Page;

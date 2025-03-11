@@ -1,3 +1,4 @@
+import { IUserDTO, userDTO } from "./../patterns/dto";
 // playwright-dev-page.ts
 
 //in ts page object pattern looks like this
@@ -38,6 +39,20 @@ export class HomePage {
   async doLogin(username: string, password: string) {
     await this.usernameInput.fill(username);
     await this.passwordInput.fill(password);
+    await this.loginBtn.click();
+  }
+
+  async fillUsernameUsingDTO(userDTO: IUserDTO) {
+    await this.usernameInput.fill(userDTO.username);
+  }
+
+  async fillPasswordUsingDTO(userDTO: IUserDTO) {
+    await this.passwordInput.fill(userDTO.password);
+  }
+
+  async doLoginDTO(userDTO: IUserDTO) {
+    await this.usernameInput.fill(userDTO.username);
+    await this.passwordInput.fill(userDTO.password);
     await this.loginBtn.click();
   }
 }
