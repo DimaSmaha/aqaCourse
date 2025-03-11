@@ -1,5 +1,6 @@
 import type { PlaywrightTestConfig } from "@playwright/test";
 import { devices } from "@playwright/test";
+require("dotenv").config();
 
 const config: PlaywrightTestConfig = {
   testDir: "./tests",
@@ -10,7 +11,7 @@ const config: PlaywrightTestConfig = {
   fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 2 : 2,
   reporter: "html",
 
   use: {
