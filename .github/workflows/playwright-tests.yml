@@ -18,7 +18,7 @@ jobs:
         run: npm ci && npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npm run pw-run-smoke
+        run: npm run pw-run-smoke-ci
         env:
           USER_LOGIN: ${{ secrets.USER_LOGIN }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
