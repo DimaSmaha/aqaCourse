@@ -1,3 +1,5 @@
+import { faker } from "@faker-js/faker";
+
 export const generateRandomLogin = () => {
   var length = 8,
     charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
@@ -6,4 +8,10 @@ export const generateRandomLogin = () => {
     retVal += charset.charAt(Math.floor(Math.random() * n));
   }
   return retVal;
+};
+
+export const checkoutData = {
+  randomFirstName: faker.person.firstName(),
+  randomLastName: faker.person.lastName(),
+  randomPostalCode: faker.location.zipCode(),
 };
